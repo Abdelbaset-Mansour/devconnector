@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 // INIT APP
 const app = express();
 
+// Middelware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 // Connect To db
 const { mongoURI } = require('./config/keys');
 
