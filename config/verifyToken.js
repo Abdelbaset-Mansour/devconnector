@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
 const { secretKey } = require('./keys');
-const User = require('../models/User');
 
 module.exports = async (req, res, next) => {
   const bearerToken = req.headers.authorization;
@@ -10,9 +9,7 @@ module.exports = async (req, res, next) => {
   try {
     if (token) {
       const verified = jwt.verify(token, secretKey);
-      // GET User From db
-      const user = await User.findById(verified._id);
-      req.user = user;
+      req.user = verified;
       next();
     }
   } catch (error) {
