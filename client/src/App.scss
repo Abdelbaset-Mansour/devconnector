@@ -1,0 +1,37 @@
+.landing {
+  background-image: url('./images/landing.jpg');
+  background-size: cover;
+  color: #fff;
+
+  .over-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 800px;
+
+    .intro {
+      padding-top: 50px;
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// Register
+.register {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+}
+
+#footer {
+  background-color: #1a1c24;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
